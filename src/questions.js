@@ -2,24 +2,24 @@ const managerQuestions = [ // Add validation for inputs
   {
     'type': 'input',
     'message': "What is the team manager's name?",
-    'name': 'managerName',
+    'name': 'name',
     // 'default': 'f',
     // 'validation': ...
   },
   {
     'type': 'input',
     'message': "What is the team manager's employee ID?",
-    'name': 'managerID',
+    'name': 'ID',
   },
   {
     'type': 'input',
     'message': "What is the team manager's email address",
-    'name': 'managerEmail',
+    'name': 'email',
   },
   {
     'type': 'input',
     'message': "What is the team manager's office number?",
-    'name': 'managerOffice',
+    'name': 'office',
   },
   {
     'type': 'list',
@@ -37,24 +37,24 @@ const engineerQuestions = [
   {
     'type': 'input',
     'message': "What is the engineer's name?",
-    'name': 'engineerName',
+    'name': 'name',
     // 'default': 'f',
     // 'validation': ...
   },
   {
     'type': 'input',
     'message': "What is the engineer's ID?",
-    'name': 'engineerID',
+    'name': 'ID',
   },
   {
     'type': 'input',
     'message': "What is the engineer's email address",
-    'name': 'engineerEmail',
+    'name': 'email',
   },
   {
     'type': 'input',
     'message': "What is the engineer's github?",
-    'name': 'engineerGithub',
+    'name': 'github',
   },
   {
     'type': 'list',
@@ -72,24 +72,24 @@ const internQuestions = [
   {
     'type': 'input',
     'message': "What is the intern's name?",
-    'name': 'internName',
+    'name': 'name',
     // 'default': 'f',
     // 'validation': ...
   },
   {
     'type': 'input',
     'message': "What is the intern's ID?",
-    'name': 'internID',
+    'name': 'ID',
   },
   {
     'type': 'input',
     'message': "What is the intern's email address",
-    'name': 'internEmail',
+    'name': 'email',
   },
   {
     'type': 'input',
     'message': "What is the intern's school?",
-    'name': 'internSchool',
+    'name': 'school',
   },
   {
     'type': 'list',

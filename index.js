@@ -3,6 +3,29 @@ const fs = require('fs');
 const [managerQuestions, engineerQuestions, internQuestions] = require('./src/questions.js');
 
 const profiles = [];
+const exampleProfiles = [
+  {
+    'name': 'a',
+    'ID': 1,
+    'email': 'a@email.com',
+    'office': 27,
+    'continue': 'Add Engineer'
+  },
+  {
+    'name': 'b',
+    'ID': 2,
+    'email': 'b@email.com',
+    'github': 'b-github',
+    'continue': 'Add Intern'
+  },
+  {
+    'name': 'c',
+    'ID': 3,
+    'email': 'c@email.com',
+    'school': 'school name',
+    'continue': 'Finish Team'
+  }
+]
 
 init();
 
