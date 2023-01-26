@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const [managerQuestions, engineerQuestions, internQuestions] = require('./src/questions.js');
+const { formatProfiles, createProfileHTML, outputHTML } = require('./src/profiles.js');
 
 const profiles = [];
 const exampleProfiles = [
@@ -47,18 +48,15 @@ function init() {
   //   }
   // }
   // console.log(profiles);
+  // createHTML(exampleProfiles);
+  const formattedProfiles = formatProfiles(exampleProfiles);
+  const profileHTML = formattedProfiles.map(createProfileHTML).join('');
+  const output = outputHTML(profileHTML);
+  fs.writeFile('./dist/index.html', output, (err) => {
+    if (err) {
+      throw err;
+    } else {
+      console.log('Team Profile created successfully')
+    }
+  });
 }
-
-// function createFile() {
-//   //
-// }
-
-// function writeToFile(fileName, data) {
-//   fs.writeFile(fileName, generateMarkdown(data), (err) => {
-//     if (err) {
-//       throw err;
-//     } else {
-//       console.log('README File written successfully')
-//     }
-//   });
-// }
