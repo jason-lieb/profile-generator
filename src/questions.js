@@ -4,7 +4,7 @@ const managerQuestions = [
     'message': "What is the team manager's name?",
     'name': 'name',
     'validate': (input) => {
-      if (input.trim().match(/^\D+$/i)) {
+      if (input.trim().match(/^[a-z ]+$/i)) {
         return true;
       } else {
         return 'Please input a name';
@@ -28,7 +28,7 @@ const managerQuestions = [
     'message': "What is the team manager's email address",
     'name': 'email',
     'validate': (input) => {
-      if (input.trim().match(/^\w+$/i)) { /// email regex
+      if (input.trim().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
         return true;
       } else {
         return 'Please input a properly formatted email';
@@ -65,7 +65,7 @@ const engineerQuestions = [
     'message': "What is the engineer's name?",
     'name': 'name',
     'validate': (input) => {
-      if (input.trim().match(/^\D+$/i)) {
+      if (input.trim().match(/^[a-z ]+$/i)) {
         return true;
       } else {
         return 'Please input a name';
@@ -89,7 +89,7 @@ const engineerQuestions = [
     'message': "What is the engineer's email address",
     'name': 'email',
     'validate': (input) => {
-      if (input.trim().match(/^\w+$/i)) { /// email regex
+      if (input.trim().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
         return true;
       } else {
         return 'Please input a properly formatted email';
@@ -101,7 +101,7 @@ const engineerQuestions = [
     'message': "What is the engineer's github?",
     'name': 'github',
     'validate': (input) => {
-      if (input.trim().match(/^\S+$/i)) { /// no spaces?
+      if (input.trim().match(/^\S+$/i)) {
         return true;
       } else {
         return 'Please input a github username without spaces';
@@ -126,7 +126,7 @@ const internQuestions = [
     'message': "What is the intern's name?",
     'name': 'name',
     'validate': (input) => {
-      if (input.trim().match(/^\D+$/i)) {
+      if (input.trim().match(/^[a-z ]+$/i)) {
         return true;
       } else {
         return 'Please input a name';
@@ -150,7 +150,7 @@ const internQuestions = [
     'message': "What is the intern's email address",
     'name': 'email',
     'validate': (input) => {
-      if (input.trim().match(/^\w+$/i)) { /// email regex
+      if (input.trim().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
         return true;
       } else {
         return 'Please input a properly formatted email';
@@ -162,7 +162,7 @@ const internQuestions = [
     'message': "What is the intern's school?",
     'name': 'school',
     'validate': (input) => {
-      if (input.trim().match(/^\D+$/i)) { // remove special characters?
+      if (input.trim().match(/^[a-z ]+$/i)) {
         return true;
       } else {
         return 'Please input a school name';
