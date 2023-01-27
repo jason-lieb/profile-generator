@@ -1,4 +1,4 @@
-const managerQuestions = [ // Add validation for inputs
+const managerQuestions = [
   {
     'type': 'input',
     'message': "What is the team manager's name?",
@@ -7,7 +7,7 @@ const managerQuestions = [ // Add validation for inputs
       if (input.trim().match(/^\D+$/i)) {
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a name';
       }
     }
   },
@@ -19,7 +19,7 @@ const managerQuestions = [ // Add validation for inputs
       if (input.trim().match(/^\d+$/)) {
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a number';
       }
     }
   },
@@ -31,7 +31,7 @@ const managerQuestions = [ // Add validation for inputs
       if (input.trim().match(/^\w+$/i)) { /// email regex
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a properly formatted email';
       }
     }
   },
@@ -43,7 +43,7 @@ const managerQuestions = [ // Add validation for inputs
       if (input.trim().match(/^\d+$/)) {
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a number';
       }
     }
   },
@@ -68,7 +68,7 @@ const engineerQuestions = [
       if (input.trim().match(/^\D+$/i)) {
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a name';
       }
     }
   },
@@ -80,7 +80,7 @@ const engineerQuestions = [
       if (input.trim().match(/^\d+$/)) {
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a number';
       }
     }
   },
@@ -92,7 +92,7 @@ const engineerQuestions = [
       if (input.trim().match(/^\w+$/i)) { /// email regex
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a properly formatted email';
       }
     }
   },
@@ -101,10 +101,10 @@ const engineerQuestions = [
     'message': "What is the engineer's github?",
     'name': 'github',
     'validate': (input) => {
-      if (input.trim().match(/^\w+$/i)) { /// no spaces?
+      if (input.trim().match(/^\S+$/i)) { /// no spaces?
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a github username without spaces';
       }
     }
   },
@@ -129,7 +129,7 @@ const internQuestions = [
       if (input.trim().match(/^\D+$/i)) {
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a name';
       }
     }
   },
@@ -141,7 +141,7 @@ const internQuestions = [
       if (input.trim().match(/^\d+$/)) {
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a number';
       }
     }
   },
@@ -153,7 +153,7 @@ const internQuestions = [
       if (input.trim().match(/^\w+$/i)) { /// email regex
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a properly formatted email';
       }
     }
   },
@@ -162,10 +162,10 @@ const internQuestions = [
     'message': "What is the intern's school?",
     'name': 'school',
     'validate': (input) => {
-      if (input.trim().match(/^\D+$/i)) {
+      if (input.trim().match(/^\D+$/i)) { // remove special characters?
         return true;
       } else {
-        return 'bad input';
+        return 'Please input a school name';
       }
     }
   },
