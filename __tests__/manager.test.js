@@ -24,6 +24,6 @@ describe('Manager', () => {
   it('Test office number', () => {
     let output = 25;
     let manager = new Manager('Steve', 1, 'steve@email.com', 25)
-    expect(manager.officeNumber).toEqual(output);
+    expect(manager.office).toEqual(output);
   })
 })

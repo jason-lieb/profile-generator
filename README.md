@@ -5,6 +5,9 @@
 
 Command line application to take information about employees and generate a profile website.
 
+## Walkthrough Video
+[Walkthrough](https://drive.google.com/file/d/1B3fB2oNu7SIjZGf0hwpGflTwQDqigNr3/view)
+
 ## Table of Contents
 
 * [Installation](#installation)
